@@ -54,6 +54,8 @@ export default function Navbar() {
 		</Menu>
 	);
 
+	const logoTextStyle = { display: { xs: 'none', md: 'flex', fontSize: '20px', fontStyle: 'italic', paddingLeft: '10px', textDecoration: 'none', color: 'white', cursor: 'default' } };
+
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position='static' sx={{ paddingLeft: 3.5, paddingRight: 3.5, backgroundColor: '#1e1e1e' }}>
@@ -61,6 +63,12 @@ export default function Navbar() {
 					<Box component='a' href='#' variant='h4' noWrap sx={{ display: { xs: 'none', md: 'flex' } }}>
 						<img src='../../../icons/logo.png' alt='' loading='lazy' />
 					</Box>
+					<Typography component='p' variant='h4' noWrap sx={logoTextStyle}>
+						—
+					</Typography>
+					<Typography component='p' variant='h4' noWrap sx={logoTextStyle}>
+						команда разработчиков
+					</Typography>
 					<Box sx={{ flexGrow: 1 }} />
 					<Box sx={{ display: { xs: 'none', md: 'flex' } }}>
 						<IconButton size='large' edge='end' aria-label='account of current user' aria-controls={menuId} aria-haspopup='true' onClick={handleProfileMenuOpen} color='inherit'>
